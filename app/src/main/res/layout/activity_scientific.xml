@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#673AB7"
+        app:title="Scientific Calculator"
+        app:titleTextColor="#FFFFFF"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/MyToolbarPopupTheme"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:text=""
+        android:textColor="#777777"
+        android:textSize="20sp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="end|center_vertical"
+        android:inputType="none"
+        android:focusable="false"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="38sp"
+        android:background="@android:color/transparent"
+        android:padding="8dp" />
+
+    <GridLayout
+        android:id="@+id/scientificGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="5"
+        android:rowCount="7"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <Button android:id="@+id/bSin" android:text="sin" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bCos" android:text="cos" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bTan" android:text="tan" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bLog" android:text="log" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bLn" android:text="ln" style="@style/ScientificButton"/>
+
+        <Button android:id="@+id/bAsin" android:text="sin⁻¹" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bAcos" android:text="cos⁻¹" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bAtan" android:text="tan⁻¹" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bSqrt" android:text="√x" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bCbrt" android:text="∛x" style="@style/ScientificButton"/>
+
+        <Button android:id="@+id/bSquare" android:text="x²" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bCube" android:text="x³" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bPower" android:text="xʸ" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bInverse" android:text="1/x" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bFactorial" android:text="n!" style="@style/ScientificButton"/>
+
+        <Button android:id="@+id/bPi" android:text="π" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bE" android:text="e" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bAbs" android:text="|x|" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bPercent" android:text="%" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bMode" android:text="DEG" style="@style/ScientificButton"/>
+
+        <Button android:id="@+id/b7" android:text="7" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b8" android:text="8" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b9" android:text="9" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bClear" android:text="C" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bDivide" android:text="÷" style="@style/ScientificOperator"/>
+
+        <Button android:id="@+id/b4" android:text="4" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b5" android:text="5" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b6" android:text="6" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bDelete" android:text="⌫" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bMultiply" android:text="×" style="@style/ScientificOperator"/>
+
+        <Button android:id="@+id/b1" android:text="1" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b2" android:text="2" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b3" android:text="3" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bMinus" android:text="−" style="@style/ScientificOperator"/>
+        <Button android:id="@+id/bPlus" android:text="+" style="@style/ScientificOperator"/>
+
+        <Button android:id="@+id/bSign" android:text="±" style="@style/ScientificButton"/>
+        <Button android:id="@+id/b0" android:text="0" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bDot" android:text="." style="@style/ScientificButton"/>
+        <Button android:id="@+id/bMod" android:text="mod" style="@style/ScientificButton"/>
+        <Button android:id="@+id/bEqual" android:text="=" style="@style/ScientificOperator"/>
+
+    </GridLayout>
+
+</LinearLayout>
